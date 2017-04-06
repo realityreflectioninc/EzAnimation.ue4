@@ -3,9 +3,9 @@ EzAnimation.ue4
 
 Easing/Animation plugin for UnrealEngine4
 
-![b][ball.gif]<br>
+![b](ball.gif)<br>
 __ByBlueprint__
-![bp](ball_bp.png)<br>
+<img src="ball_bp.png" width="400px" /><br>
 
 __ByCode__
 ```cpp

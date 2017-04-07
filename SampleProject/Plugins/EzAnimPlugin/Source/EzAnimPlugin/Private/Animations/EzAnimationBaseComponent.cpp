@@ -16,6 +16,9 @@ void UEzAnimationBaseComponent::BeginPlay() {
 }
 
 USceneComponent *UEzAnimationBaseComponent::GetTargetComponent() const {
+	if (targetComponent == nullptr)
+		return GetOwner()->GetRootComponent();
+
 	return targetComponent;
 }
 

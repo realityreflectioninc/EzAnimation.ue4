@@ -27,5 +27,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "EzAnim")
 	float duration;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "EzAnim")
+	bool loop;
+
 	float time;
 };

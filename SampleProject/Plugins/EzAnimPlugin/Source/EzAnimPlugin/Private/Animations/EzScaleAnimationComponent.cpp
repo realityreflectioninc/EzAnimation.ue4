@@ -21,6 +21,6 @@ void UEzScaleAnimationComponent::TickComponent(float DeltaTime, ELevelTick TickT
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	float scale = GetEaseValue();
-	targetComponent->SetRelativeScale3D(FVector(scale, scale, scale));
+	GetTargetComponent()->SetRelativeScale3D(FVector(scale, scale, scale));
 }
 

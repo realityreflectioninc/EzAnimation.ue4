@@ -8,7 +8,6 @@ public class EzAnimPlugin : ModuleRules
         PrivateIncludePaths.AddRange(new string[] { "EzAnimPlugin/Private", });
         PublicIncludePaths.AddRange(new string[] { "EzAnimPlugin/Public" });
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Engine", "Core", "CoreUObject", "Engine", "InputCore" });
-        PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Engine", "Core", "CoreUObject", "InputCore" });
     }
 }

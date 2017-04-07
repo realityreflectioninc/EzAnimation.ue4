@@ -17,6 +17,6 @@ void UEzScale3DAnimationComponent::TickComponent(float DeltaTime, ELevelTick Tic
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	auto scale = GetEaseValue();
-	targetComponent->SetRelativeScale3D(scale);
+	GetTargetComponent()->SetRelativeScale3D(scale);
 }
 

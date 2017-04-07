@@ -7,14 +7,15 @@
 	"Description" : "Easy Animation Plugin",
 	"Category" : "Utility",
 	"CreatedBy" : "Reality Reflection",
-	"EnabledByDefault" : true,
+	"EnabledByDefault" : false,
+	"Installed": false,
 
 	"Modules" :
 	[
 		{
 			"Name" : "EzAnimPlugin",
 			"Type" : "Runtime",
-			"LoadingPhase" : "PreDefault"
+			"LoadingPhase" : "PreLoadingScreen"
 		}
 	],
 

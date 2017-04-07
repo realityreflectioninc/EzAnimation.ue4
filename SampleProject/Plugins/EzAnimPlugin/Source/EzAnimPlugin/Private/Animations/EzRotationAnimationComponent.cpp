@@ -16,7 +16,7 @@ void UEzRotationAnimationComponent::TickComponent(float DeltaTime, ELevelTick Ti
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	auto rotation = GetEaseValue();
-	targetComponent->SetRelativeRotation(
+	GetTargetComponent()->SetRelativeRotation(
 		FQuat::MakeFromEuler(FVector(rotation.X, rotation.Y, rotation.Z)));
 }
 

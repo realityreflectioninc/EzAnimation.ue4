@@ -16,8 +16,12 @@ void UEzPeriodicAnimationComponent::TickComponent(float DeltaTime, ELevelTick Ti
 
 	time += DeltaTime;
 
-	if (duration <= time)
-		Finish();
+	if (duration <= time) {
+		if (loop == true)
+			time = 0.0f;
+		else
+			Finish();
+	}
 }
 
 float UEzPeriodicAnimationComponent::GetNormalizedTime() const {

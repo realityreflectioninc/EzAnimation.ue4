@@ -13,7 +13,7 @@ __ByCode__
 ```cpp
 auto ctx = UEzAnimationFunctionLibrary::FadeInWithScale(
   staticMeshComponent,
-  2.0f /* duration */, 1.0f /* targetScale */,
+  2.0f /* duration */,
   EzEaseType::EaseElasticOut);
 ctx->AppendDestroy();
 ```

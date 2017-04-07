@@ -17,3 +17,7 @@ auto ctx = UEzAnimationFunctionLibrary::FadeInWithScale(
   EzEaseType::EaseElasticOut);
 ctx->AppendDestroy();
 ```
+
+How to Install
+----
+TODO

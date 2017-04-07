@@ -7,7 +7,7 @@ Ease Functions
 Animation
 ----
 * __CreateAnimation__
-  * [ActorComponent](animation/actor_component.md)
+  * [ActorComponent](animation/animation_component.md)
   * Blueprint
   * C++
 * __AnimationSequence__

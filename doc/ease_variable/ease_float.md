@@ -5,11 +5,11 @@ __EaseFloat__ 은 시간이 지남에 따라 자동으로 값이 증가/감소�
 
 EaseFloat 컴포넌트 추가하기
 ----
-![img](ease_float_1.png)<br>
+![img](img/ease_float_1.png)<br>
 
-![img](ease_float_2.png)
+![img](img/ease_float_2.png)
 
 
 값 사용하기
 ----
-![img](ease_float_3.png)
+![img](img/ease_float_3.png)

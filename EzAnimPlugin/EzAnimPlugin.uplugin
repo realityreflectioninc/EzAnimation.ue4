@@ -1,0 +1,22 @@
+{
+	"FileVersion" : 3,
+
+	"FriendlyName" : "Easy Animation Plugin",
+	"Version" : 1,
+	"FriendlyVersion" : "0.1",
+	"Description" : "Easy Animation Plugin",
+	"Category" : "Utility",
+	"CreatedBy" : "Reality Reflection",
+	"EnabledByDefault" : true,
+
+	"Modules" :
+	[
+		{
+			"Name" : "EzAnimPlugin",
+			"Type" : "Runtime",
+			"LoadingPhase" : "PreDefault"
+		}
+	],
+
+	"CanContainContent" : true
+}

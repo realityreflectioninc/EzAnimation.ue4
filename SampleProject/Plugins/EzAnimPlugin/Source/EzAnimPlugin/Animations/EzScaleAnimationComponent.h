@@ -24,7 +24,7 @@ protected:
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-private:
+protected:
 	UPROPERTY(EditAnywhere, Category="EzAnim")
 	float scaleTo;
 };

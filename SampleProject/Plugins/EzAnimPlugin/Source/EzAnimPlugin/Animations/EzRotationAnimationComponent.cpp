@@ -7,8 +7,8 @@ UEzRotationAnimationComponent::UEzRotationAnimationComponent() {
 void UEzRotationAnimationComponent::BeginPlay() {
 	Super::BeginPlay();
 
-	if (IsValid(targetComponent)) {
-		SetStartAndEndValue(targetComponent->RelativeRotation.Vector(), rotateTo);
+	if (IsValid(GetTargetComponent())) {
+		SetStartAndEndValue(GetTargetComponent()->RelativeRotation.Vector(), rotateTo);
 	}
 }
 

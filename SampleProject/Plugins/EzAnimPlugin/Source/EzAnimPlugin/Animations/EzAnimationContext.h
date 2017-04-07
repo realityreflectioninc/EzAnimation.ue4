@@ -29,6 +29,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "EzAnim")
 	void CancelAllPendingAnimations();
 
+    UFUNCTION(BlueprintCallable, Category = "EzAnim_Append")
+    UEzAnimationContext *AppendShake(
+        float duration = 1.0f,
+        float amplitude = 5.0f, float frequency = 0.05f,
+        const FVector direction = FVector(1, 0, 1));
+
 	UFUNCTION(BlueprintCallable, Category = "EzAnim_Append")
 	UEzAnimationContext *AppendDelay(float delay = 1.0f);
 	

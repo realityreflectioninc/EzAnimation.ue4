@@ -12,8 +12,8 @@ UEzScaleAnimationComponent::UEzScaleAnimationComponent() :
 void UEzScaleAnimationComponent::BeginPlay() {
 	Super::BeginPlay();
 	
-	if (IsValid(targetComponent)) {
-		SetStartAndEndValue(targetComponent->RelativeScale3D.X, scaleTo);
+	if (IsValid(GetTargetComponent())) {
+		SetStartAndEndValue(GetTargetComponent()->RelativeScale3D.X, scaleTo);
 	}
 }
 

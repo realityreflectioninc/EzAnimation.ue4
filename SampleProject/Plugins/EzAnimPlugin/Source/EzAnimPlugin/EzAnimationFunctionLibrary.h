@@ -23,6 +23,15 @@ public:
 	UFUNCTION(BlueprintPure, meta = (CompactNodeTitle = "->", BlueprintAutocast), Category = "EzFloat")
 	static FText Conv_EaseFloatToText(UEzEaseFloatComponent *easeFloat);
 
+    UFUNCTION(BlueprintCallable, Category = "EzAnim", meta = (HidePin = "context"))
+    static UEzAnimationContext *Shake(
+        USceneComponent *target,
+        float duration = 1.0f,
+        float amplitude = 5.0f,
+        float frequency = 0.05f,
+        const FVector direction = FVector(1,0,1),
+        UEzAnimationContext *context = nullptr);
+
 	UFUNCTION(BlueprintCallable, Category = "EzAnim", meta = (HidePin = "context"))
 	static UEzAnimationContext *FadeInWithScale(
 		USceneComponent *target,

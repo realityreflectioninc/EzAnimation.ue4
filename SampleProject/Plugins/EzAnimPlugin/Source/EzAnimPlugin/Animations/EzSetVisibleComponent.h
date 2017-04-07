@@ -8,7 +8,7 @@
 
 class UEzAnimationFunctionLibrary;
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(Custom) )
 class EZANIMPLUGIN_API UEzSetVisibleComponent : public UEzAnimationBaseComponent
 {
 friend UEzAnimationFunctionLibrary;

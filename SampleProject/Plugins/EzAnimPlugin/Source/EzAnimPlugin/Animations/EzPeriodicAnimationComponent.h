@@ -8,7 +8,7 @@
 
 class UEzAnimationFunctionLibrary;
 
-UCLASS( ClassGroup=(Custom))
+UCLASS( ClassGroup=(Custom) )
 class EZANIMPLUGIN_API UEzPeriodicAnimationComponent : public UEzAnimationBaseComponent {
 	friend UEzAnimationFunctionLibrary;
 	GENERATED_BODY()
@@ -22,13 +22,14 @@ protected:
 	virtual void BeginPlay() override;
 
 	inline float GetNormalizedTime() const;
+    inline bool IsLastTick(float dt) const;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "EzAnim")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "EzAnim_Duration")
 	float duration;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "EzAnim")
-	bool loop;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "EzAnim_Duration")
+    bool loop;
 
 	float time;
 };

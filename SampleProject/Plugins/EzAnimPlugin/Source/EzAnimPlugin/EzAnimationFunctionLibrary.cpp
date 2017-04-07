@@ -10,6 +10,7 @@
 #include "EzScale3DAnimationComponent.h"
 #include "EzScalarParamAnimationComponent.h"
 #include "EzSetVisibleComponent.h"
+#include "EzShakeAnimationComponent.h"
 
 #include "EzAnimationFunctionLibrary.h"
 
@@ -57,6 +58,18 @@ FText UEzAnimationFunctionLibrary::Conv_EaseFloatToText(UEzEaseFloatComponent *e
 	return FText::FromString(buf);
 }
 
+UEzAnimationContext *UEzAnimationFunctionLibrary::Shake(USceneComponent *target,
+    float duration,
+    float amplitude, float frequency, const FVector direction,
+    UEzAnimationContext *context) {
+
+    BEGIN_FACTORY_BODY(target, UEzShakeAnimationComponent)
+        comp->duration = duration;
+        comp->amplitude = amplitude;
+        comp->frequency = frequency;
+        comp->direction = direction;
+    END_FACTORY_BODY()
+}
 UEzAnimationContext *UEzAnimationFunctionLibrary::FadeInWithScale(USceneComponent *target,
 	float duration,
 	EzEaseType easeType, 

@@ -22,5 +22,5 @@ void UEzDestroyAfterComponent::OnDestroyTimer() {
 	if (destroyActor && IsValid(owner))
 		owner->Destroy();
 	else
-		targetComponent->DestroyComponent();
+		GetTargetComponent()->DestroyComponent();
 }

@@ -5,9 +5,11 @@
 #include "EzAnimationBaseComponent.generated.h"
 
 class UEzAnimationContext;
+class UEzAnimationFunctionLibrary;
 
 UCLASS( ClassGroup=(Custom))
 class EZANIMPLUGIN_API UEzAnimationBaseComponent : public UActorComponent {
+friend UEzAnimationFunctionLibrary;
 	GENERATED_BODY()
 
 public:	
@@ -25,7 +27,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "EzAnim")
 	UEzAnimationContext *context;
 
-protected:
+private:
 	UPROPERTY()
 	USceneComponent *targetComponent;
 };

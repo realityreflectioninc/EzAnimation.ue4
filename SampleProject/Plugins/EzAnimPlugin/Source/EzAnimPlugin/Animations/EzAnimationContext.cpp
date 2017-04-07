@@ -38,6 +38,18 @@ void UEzAnimationContext::CancelAllPendingAnimations() {
 	pendingTasks.swap(emptyQ);
 }
 
+UEzAnimationContext *UEzAnimationContext::AppendShake(float delay,
+    float amplitude, float frequency,
+    const FVector direction) {
+
+    pendingTasks.push([this, delay, amplitude, frequency, direction]() {
+        UEzAnimationFunctionLibrary::Shake(GetTargetComponent(),
+            delay, amplitude, frequency, direction, this);
+    });
+
+    return this;
+}
+
 UEzAnimationContext *UEzAnimationContext::AppendDelay(float delay) {
 
 	pendingTasks.push([this, delay]() {

@@ -40,4 +40,7 @@ private:
 
     UPROPERTY(EditAnywhere, Category = "EzAnim")
     float angle;
+
+    UPROPERTY(EditAnywhere, Category = "EzAnim")
+    FVector axis;
 };

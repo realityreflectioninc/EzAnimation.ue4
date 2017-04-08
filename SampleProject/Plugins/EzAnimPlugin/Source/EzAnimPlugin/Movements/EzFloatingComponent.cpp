@@ -6,7 +6,7 @@ UEzFloatingComponent::UEzFloatingComponent() :
     playerIndex(0),
     target(nullptr),
     syncRotation(true),
-    distance(100), angle(0) {
+    distance(100), angle(0), axis(1, 1, 0) {
 
     PrimaryComponentTick.TickGroup = ETickingGroup::TG_PostUpdateWork;
     PrimaryComponentTick.bCanEverTick = true;
@@ -44,12 +44,12 @@ void UEzFloatingComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
         if (IsValid(pawn)) {
             targetLocation = pawn->GetActorLocation();
             forwardVector = pawn->GetActorForwardVector();
-            targetRotation = target->GetActorRotation();
+            targetRotation = pawn->GetActorRotation();
         }
     }
      
     auto floating = forwardVector;
-    floating = forwardVector.RotateAngleAxis(angle, FVector(1,1,0)) * distance;
+    floating = forwardVector.RotateAngleAxis(angle, axis) * distance;
     GetOwner()->SetActorLocation(targetLocation + floating);
 
     if (syncRotation) {

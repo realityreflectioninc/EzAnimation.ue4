@@ -19,6 +19,6 @@ auto ctx = UEzAnimationFunctionLibrary::FadeInWithScale(
 ctx->AppendDestroy();
 ```
 
-How to Install
+How to install
 ----
-TODO
+just copy [this](SampleProject/Plugins/EzAnimPlugin) directory to your `Plugins` directory. (make sure you have at least c++ code in your project.)

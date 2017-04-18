@@ -2,7 +2,7 @@
 
 UENUM(BlueprintType)
 enum EzMovementTarget {
-    MT_Actor,
-    MT_PlayerPawn,
-    MT_PlayerCamera
+    EZMT_Actor,
+    EZMT_PlayerPawn,
+    EZMT_PlayerCamera
 };

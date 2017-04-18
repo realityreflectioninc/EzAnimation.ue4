@@ -19,8 +19,10 @@ protected:
 public:
     virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+#if WITH_EDITOR
 private:
     virtual bool CanEditChange(const UProperty* prop) const override;
+#endif
 
 private:
     UPROPERTY(EditAnywhere, Category = "EzAnim_MovementTarget")
